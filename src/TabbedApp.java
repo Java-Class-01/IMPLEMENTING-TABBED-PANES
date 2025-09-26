@@ -42,5 +42,22 @@ public class TabbedApp {
         panel.add(new JTextField());
         return panel;
     }
+    public JPanel prepareTaskTab() {
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        panel.setBorder(BorderFactory.createTitledBorder("task Settings"));
+
+        JCheckBox PartOne = new JCheckBox("Logic");
+        JCheckBox PartTwo = new JCheckBox("Test");
+        JCheckBox PartThree = new JCheckBox("Documentation");
+
+        panel.add(PartOne);
+        panel.add(Box.createVerticalStrut(10));
+        panel.add(PartTwo);
+        panel.add(Box.createVerticalStrut(10));
+        panel.add(PartThree);
+
+        return panel;
+    }
 
 }
