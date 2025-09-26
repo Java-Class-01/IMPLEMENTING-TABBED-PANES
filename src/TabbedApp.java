@@ -31,5 +31,16 @@ public class TabbedApp {
 
         return mainTabbedPane;
     }
+    public JPanel prepareUserInfoTab() {
+        JPanel panel = new JPanel(new GridLayout(2, 2, 5, 5));
+        panel.setBorder(BorderFactory.createTitledBorder("User Information"));
+
+        panel.add(new JLabel("Name:"));
+        panel.add(new JTextField());
+
+        panel.add(new JLabel("Email:"));
+        panel.add(new JTextField());
+        return panel;
+    }
 
 }
