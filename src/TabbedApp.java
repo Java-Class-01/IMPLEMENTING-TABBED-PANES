@@ -80,4 +80,13 @@ public class TabbedApp {
         return Namepanel;
     }
 
+    public JPanel preparePanelOne(){
+        JPanel panelOne=new JPanel();
+
+        panelOne.add(this.prepareNamePanel());
+
+
+        return panelOne;
+    }
+
 }
