@@ -33,6 +33,9 @@ public class TabbedApp {
         mainTabbedPane.add("User Info", userInfoTab);
         mainTabbedPane.add("Task", taskTab);
 
+        mainTabbedPane.addTab("interact tab",this.preparePanelOne());
+        mainTabbedPane.addTab("activity tab",this.preparePanelTwo());
+
         return mainTabbedPane;
     }
     public JPanel prepareUserInfoTab() {
@@ -62,6 +65,19 @@ public class TabbedApp {
         panel.add(PartThree);
 
         return panel;
+    }
+
+    public JPanel prepareNamePanel(){
+        JPanel Namepanel=new JPanel();
+        nameField=new JTextField(15);
+        welcomeLabel=new JLabel("");
+        submitButton=new JButton("submit");
+        JLabel yournameL=new JLabel("enter your name");
+        Namepanel.add(yournameL);
+        Namepanel.add(nameField,welcomeLabel);
+        Namepanel.add(submitButton);
+
+        return Namepanel;
     }
 
 }
