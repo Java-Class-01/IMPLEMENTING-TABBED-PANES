@@ -89,4 +89,10 @@ public class TabbedApp {
         return panelOne;
     }
 
+    public JPanel preparePanelTwo(){
+        JPanel panelTwo=new JPanel();
+        panelTwo.add(new JLabel("panel two"));
+        return panelTwo;
+    }
+
 }
