@@ -14,16 +14,18 @@ public class TabbedApp {
     public TabbedApp() {
         this.prepareMainFrame();
     }
-    public JFrame prepareMainFrame() {
-        JFrame.setDefaultLookAndFeelDecorated(true);
-        mainFrame = new JFrame("Tabbed Interface Application");
 
-        mainFrame.setExtendedState(JFrame.MAXIMIZED_BOTH); // full screen
-        mainFrame.setLayout(new BorderLayout());
-        mainFrame.add(this.prepareTabbedPane());
-        mainFrame.setVisible(true);
-        return mainFrame;
-    }
+        public JFrame prepareMainFrame() {
+            JFrame.setDefaultLookAndFeelDecorated(true);
+            mainFrame = new JFrame("Tabbed Interface Application");
+
+            mainFrame.setExtendedState(JFrame.MAXIMIZED_BOTH); // full screen
+            mainFrame.setLayout(new BorderLayout());
+            mainFrame.add(this.prepareTabbedPane());
+            mainFrame.setVisible(true);
+            return mainFrame;
+        }
+
     public JTabbedPane prepareTabbedPane() {
         mainTabbedPane = new JTabbedPane();
 
@@ -38,6 +40,7 @@ public class TabbedApp {
 
         return mainTabbedPane;
     }
+
     public JPanel prepareUserInfoTab() {
         JPanel panel = new JPanel(new GridLayout(2, 2, 5, 5));
         panel.setBorder(BorderFactory.createTitledBorder("User Information"));
@@ -49,6 +52,7 @@ public class TabbedApp {
         panel.add(new JTextField());
         return panel;
     }
+
     public JPanel prepareTaskTab() {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
