@@ -7,6 +7,10 @@ public class TabbedApp {
     Component userInfoTab;
     Component taskTab;
 
+    JTextField nameField;
+    JLabel welcomeLabel;
+    JButton submitButton;
+
     public TabbedApp() {
         this.prepareMainFrame();
     }
@@ -16,7 +20,7 @@ public class TabbedApp {
 
         mainFrame.setExtendedState(JFrame.MAXIMIZED_BOTH); // full screen
         mainFrame.setLayout(new BorderLayout());
-
+        mainFrame.add(this.prepareTabbedPane());
         mainFrame.setVisible(true);
         return mainFrame;
     }
