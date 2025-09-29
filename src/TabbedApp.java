@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class TabbedApp {
     JFrame mainFrame;
@@ -91,7 +93,35 @@ public class TabbedApp {
 
     public JPanel preparePanelTwo(){
         JPanel panelTwo=new JPanel();
-        panelTwo.add(new JLabel("panel two"));
+        //panelTwo.add(new JLabel("panel two"));
+        panelTwo.setLayout(new GridLayout(4,2,5,5));
+        JLabel label=new JLabel("enter your number to be added");
+        JTextField text=new JTextField();
+        JLabel labeltwo=new JLabel("enter your second number to add on the first");
+        JTextField textTwo=new JTextField();
+        JButton plusButton=new JButton("add your numbers");
+        JLabel resultLabel=new JLabel("here are your results");
+        plusButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try{
+                    double num1=Double.parseDouble(text.getText());
+                    double num2=Double.parseDouble(textTwo.getText());
+                    double sum=num1+num2;
+                    resultLabel.setText("result is "+sum);
+                }catch (NumberFormatException ex){
+                    JOptionPane.showMessageDialog(panelTwo,"enter number");
+                }
+
+            }
+        });
+        panelTwo.add(label);
+        panelTwo.add(text);
+        panelTwo.add(labeltwo);
+        panelTwo.add(textTwo);
+        panelTwo.add(plusButton);
+        panelTwo.add(resultLabel);
+
         return panelTwo;
     }
 
