@@ -1,0 +1,6 @@
+projectKey=TaskSix
+serverUrl=http://localhost:9000
+serverVersion=25.11.0.114957
+dashboardUrl=http://localhost:9000/dashboard?id=TaskSix
+ceTaskId=2c588fc6-ebf7-490c-9f83-fb6812deb4a3
+ceTaskUrl=http://localhost:9000/api/ce/task?id=2c588fc6-ebf7-490c-9f83-fb6812deb4a3
